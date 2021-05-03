@@ -103,11 +103,9 @@ static void Pointer_Arithmetic(void)
 
     i = get_bus_status();
 
-    /* polyspace<MISRA-C3:18.4:Not a defect:No action planned>Purpose is to show PolySpace can find pointer errors - pointers are often deemed necessary and code verification is the mitigation */
     if (i >= 0)  {*(p - i) = 10;}
 
     if ((0 < i) && (i <= 100)) {
-        /* polyspace<MISRA-C3:18.4:Not a defect:No action planned> Purpose is to show PolySpace can find pointer errors - pointers are often deemed necessary and code verification is the mitigation */
         p = p - i;
         *p = 5;     /* Safe pointer access */
     }
@@ -135,7 +133,6 @@ static void Recursion(int* depth)
 
 
     if (*depth < 50) {
-        /* polyspace<MISRA-C3:17.2:Not a defect:No action planned> Purpose is to show that PolySpace can spot problems with recursive code*/
         Recursion(depth);
     }
 }
