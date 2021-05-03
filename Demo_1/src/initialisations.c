@@ -86,3 +86,10 @@ int polynomia(int input)
         return y;
     }
 }
+s32 read_bus_status(void)
+{
+	if(rand())
+		return 1;
+	else
+		return 0;
+}

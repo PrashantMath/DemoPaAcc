@@ -15,7 +15,7 @@
 
 #define MAX_SIZE 10
 
-#ifdef DEFINE_TYPES
+//#ifdef DEFINE_TYPES
 typedef unsigned int   u32;
 typedef          int   s32;
 typedef unsigned short u16;
@@ -24,7 +24,7 @@ typedef unsigned char  u8;
 typedef          char  s8;
 typedef double         d64;
 typedef float          f32;
-#endif
+//#endif
 
 
 /* automatically stubbed functions */

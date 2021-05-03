@@ -2,16 +2,10 @@
   * Polyspace example.
   *       Copyright 2012-2015 The MathWorks, Inc.
   */
-
+#include <stdlib.h>
 #include <math.h>
 #include "include.h"
 
-/* polyspace:begin<MISRA-C3:D4.6:High:Fix>  Add a types.h file, create typedefs and replace inbuilt types  */
-/* polyspace:begin<MISRA-C:5.7:Not a defect:No Action planned> The reused names in this function actual seem to be appropriate uses of scoping */
-
-
-/* Internal function         */
-/* Needed for MISRA-rule 8.1 */
 static int get_oil_pressure(void);
 static void Close_To_Zero(void);
 static int Non_Infinite_Loop(void);
@@ -21,7 +15,7 @@ static void Recursion_caller(void);
 static void Square_Root_conv(double alpha, float* beta_pt);
 static void Square_Root(void);
 static void Unreachable_Code(void);
-/* polyspace<MISRA-C3:8.7:Low:Investigate> should have internal linkage! */
+
 extern int get_bus_status(void);
 
 
@@ -30,8 +24,11 @@ static int get_oil_pressure(void)
     volatile int vol_i;
     int i;
     i = vol_i;
-    assert(i > 0);
-    return i;
+    //assert(i > 0);
+    if(i > 0)
+    	return i;
+    else
+    	exit(0);
 }
 
 
@@ -179,7 +176,7 @@ static void Square_Root(void)
 {
     double alpha = random_float();
     float beta;
-    /* polyspace<MISRA-C3:5.3:Not a defect:No Action planned> Gamma is the appropriate name */
+
     float gamma;
 
     Square_Root_conv(alpha, &beta);
@@ -229,7 +226,26 @@ void RTE(void)
     Unreachable_Code();
 
 }
+s32  random_int(void)
+{
+	s32 tmp = 0;
 
-/* polyspace:end<MISRA-C:5.7:Not a defect:No Action planned> The reused names in this function actual seem to be appropriate uses of scoping */
+	tmp = rand();
 
-/* polyspace:end<MISRA-C3:D4.6:High:Fix>  Add a types.h file, create typedefs and replace inbuilt types  */
+	return tmp;
+}
+f32  random_float(void)
+{
+	f32 tmpf = 0;
+
+	tmpf = rand();
+
+	return tmpf;
+}
+int get_bus_status(void)
+{
+	if(rand())
+		return 1;
+	else
+		return 0;
+}

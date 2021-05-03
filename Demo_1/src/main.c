@@ -57,3 +57,11 @@ void main(void)
         break;
     }
 }
+s32 read_on_bus(void)
+{
+	s32 tmps = 0;
+
+	tmps = rand();
+
+	return tmps;
+}

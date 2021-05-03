@@ -135,3 +135,7 @@ static s32 unused_fonction(void)
 {
     return saved_values[output_v1] + (s32) generic_validation((output_v6 / 10000) , (output_v7 / 16000));
 }
+void SEND_MESSAGE(s32 status, const s8 *message)
+{
+	printf("status = %d \n", status, *message);
+}
