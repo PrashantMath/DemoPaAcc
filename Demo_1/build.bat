@@ -6,7 +6,7 @@ rd /S /Q Notification && md Notification
 
 @echo on
 
-cd "C:\Work\2021_WFD\Jenkins_wsp\Demo_1"
+cd "C:\Work\2021_WFD\Jenkins_wsp\Demo_1\src"
 del *.o
 gcc -I ../includes -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MT"example.o" -o "example.o" "example.c"
 gcc -I ../includes -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MT"initialisations.o" -o "initialisations.o" "initialisations.c"
