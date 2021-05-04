@@ -1,5 +1,5 @@
 set PATH=C:\MATLAB\PS_Ser_R2021a\polyspace\bin;%PATH%
-set ps_helper_access=polyspace-access -host BGL-PMATHAPAX -port 9443 -protocol http -login admin -encrypted-password PJJBJHMADIMOPCNPBDEJBPBJNENOAPCB
+set ps_helper_access=polyspace-access -host BGL-PMATHAPA -port 9443 -protocol http -login admin -encrypted-password PJJBJHMADIMOPCNPBDEJBPBJNENOAPCB
 set RESULT=ResultBF
 set PROG=DemoPaAcc
 set PARENT_PROJECT_ON_ACCESS=/public/DemoPaAcc
