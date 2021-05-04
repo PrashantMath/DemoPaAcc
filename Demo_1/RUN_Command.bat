@@ -1,4 +1,4 @@
-set PATH=C:\MATLAB\PS_R2021a\polyspace\bin;%PATH%
+set PATH=C:\MATLAB\PS_Ser_R2021a\polyspace\bin;%PATH%
 set ps_helper_access=polyspace-access -host BGL-PMATHAPAX -port 9443 -protocol http -login admin -encrypt-password PJJBJHMADIMOPCNPBDEJBPBJNENOAPCB
 set RESULT=ResultBF
 set PROG=DemoPaAcc
